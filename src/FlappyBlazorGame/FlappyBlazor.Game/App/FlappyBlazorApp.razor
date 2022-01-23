@@ -1,0 +1,27 @@
+﻿@if(_gameManager is null)
+{
+	<em>Loading...</em>
+}
+else
+{	
+	<div class="border-left"></div>
+	<div class="flappy-blazor-game"
+		tabindex="0"
+		@onclick=@(() => _gameManager!.StartGame())
+		@onkeyup="_gameManager.HandleKeyUp">
+
+		<div class="border-top"></div>
+		<div class="sky">
+			<Bird Model=_gameManager?.Bird />
+		</div>
+
+		<div class="ground"></div>
+
+		@foreach (var pipeModel in _gameManager!.Pipes)
+		{
+			<Pipe Model=pipeModel />
+		}
+
+	</div>
+	<div class="border-right"></div>
+}
