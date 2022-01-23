@@ -9,8 +9,8 @@ public class PipeModel
     public int Speed { get; private set; }
     public int Width { get; private set; }
 
-    public int GapBottom => DistanceFromBottom + Heigth;
-    public int GapTop => GapBottom + Gap;
+    public int GapLower => Configuration.Pipe_Height + DistanceFromBottom - Configuration.Game_GroundHeight;
+    public int GapUpper => GapLower + Configuration.Pipe_Gap;
 
 
     public PipeModel(int gap, int heigth, int width, int speed = Configuration.Pipe_Speed)
@@ -23,11 +23,10 @@ public class PipeModel
 
     public bool IsCentered(int birdWidth, int gameWidth)
     {
-        var hasEnteredCenter = DistanceFromLeft < (gameWidth / 2) + (birdWidth / 2);
-        var hasExitedCenter = DistanceFromLeft > (gameWidth / 2) + (birdWidth / 2) - Width;
+        var gameCenterLeft = (gameWidth - birdWidth) / 2;
+        var gameCenterRight = (gameWidth + birdWidth) / 2;
 
-        return hasEnteredCenter && !hasExitedCenter;
-
+         return (DistanceFromLeft < gameCenterRight && DistanceFromLeft > gameCenterLeft - Configuration.Bird_Width);
     }
 
     public bool IsOffScreen(int pipeWidth)

@@ -58,8 +58,8 @@ internal class GameManager
 
         if (centeredPipe != null)
         {
-            var hasCollidedWithBottom = Bird.DistanceFromGround < centeredPipe.GapBottom - Configuration.Game_GroundHeight;
-            var hasCollidedWithTop = Bird.DistanceFromGround + Configuration.Bird_Height > centeredPipe.GapTop - Configuration.Game_GroundHeight;
+            var hasCollidedWithBottom = Bird.DistanceFromGround < centeredPipe.GapLower;
+            var hasCollidedWithTop = Bird.DistanceFromGround > centeredPipe.GapUpper - Configuration.Bird_Height;
 
             if (hasCollidedWithBottom || hasCollidedWithTop)
             {

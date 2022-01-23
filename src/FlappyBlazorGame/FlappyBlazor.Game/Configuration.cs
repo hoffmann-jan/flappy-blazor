@@ -9,7 +9,7 @@ internal class Configuration
     public const int Game_DistanceFromLeftToNextPipe = 250;
 
     public const int Bird_Height = 45;
-    public const int Bird_Width = 0;
+    public const int Bird_Width = 60;
     public const int Bird_JumpStrength = 50;
     public const int Bird_StartDistanceFromGround = 100;
     public const int Bird_MaximalHightForJump = 530;
@@ -19,7 +19,7 @@ internal class Configuration
     public const int Pipe_Height = 300;
     public const int Pipe_Width = 60;
     public const int Pipe_Speed = 2;
-    public const int Pipe_DistanceFromBottomMin = 0;
+    public const int Pipe_DistanceFromBottomMin = 1;
     public const int Pipe_DistanceFromBottomMax = 60;
     public const int Pipe_DistanceFromLeft = Game_Width;
 }
