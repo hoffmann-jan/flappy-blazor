@@ -21,8 +21,8 @@ public class PipeModel
 
     public bool IsCentered(int birdWidth, int gameWidth)
     {
-        var hasEnteredCenter = DistanceFromLeft <= (gameWidth / 2) + (birdWidth / 2);
-        var hasExitedCenter = DistanceFromLeft <= (gameWidth / 2) + (birdWidth / 2) - Width;
+        var hasEnteredCenter = DistanceFromLeft < (gameWidth / 2) + (birdWidth / 2);
+        var hasExitedCenter = DistanceFromLeft > (gameWidth / 2) + (birdWidth / 2) - Width;
 
         return hasEnteredCenter && !hasExitedCenter;
 
