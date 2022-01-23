@@ -8,7 +8,8 @@ else
 	<div class="flappy-blazor-game"
 		tabindex="0"
 		@onclick=@(() => _gameManager!.StartGame())
-		@onkeyup="_gameManager.HandleKeyUp">
+		@onkeyup=_gameManager.HandleKeyUp
+		@ontouchend=_gameManager.HandleTouched>
 
 		<div class="border-top"></div>
 		<div class="sky">

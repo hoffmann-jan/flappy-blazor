@@ -34,6 +34,18 @@ internal class GameManager
         }
     }
 
+    public void HandleTouched(TouchEventArgs touchEventArgs)
+    {
+        if (IsRunning)
+        {
+            Jump();
+        }
+        else
+        {
+            StartGame();
+        }
+    }
+
     public async Task StartGame()
     {
         if (IsRunning)
