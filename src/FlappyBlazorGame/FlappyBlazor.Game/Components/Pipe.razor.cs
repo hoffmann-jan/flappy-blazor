@@ -6,7 +6,7 @@ namespace FlappyBlazor.Game.Components;
 public partial class Pipe
 {
     [Parameter] public PipeModel? Model { get; set; }
-    [Parameter] public int PipeHeigth { get; set; } = 300;
+    [Parameter] public int PipeHeigth { get; set; } = Configuration.Pipe_Height;
 
 
     string _bottomPipeCss =>

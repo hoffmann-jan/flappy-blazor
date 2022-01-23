@@ -5,15 +5,6 @@ using Microsoft.AspNetCore.Components.Web;
 namespace FlappyBlazor.Game;
 internal class GameManager
 {
-    private readonly int _birdHeight = 45;
-    private readonly int _birdWidth = 60;
-    private readonly int _gameWidth = 500;
-    private readonly int _groundHeight = 150;
-    private readonly int _pipeGap = 150;
-    private readonly int _pipeHeight = 300;
-    private readonly int _pipeWidth = 60;
-    private readonly int _gravity = 2;
-
     public event EventHandler? MainLoopCycleCompleted;
 
     public BirdModel Bird { get; private set; }
@@ -28,13 +19,13 @@ internal class GameManager
 
     public void HandleKeyUp(KeyboardEventArgs keyboardEventArgs)
     {
-        if (keyboardEventArgs.Key == " ")
+        if (keyboardEventArgs.Key == Configuration.Bird_JumpKeyString)
         {
             Jump();
         }
     }
 
-    public void HandleTouched(TouchEventArgs touchEventArgs)
+    public async void HandleTouched(TouchEventArgs touchEventArgs)
     {
         if (IsRunning)
         {
@@ -42,7 +33,7 @@ internal class GameManager
         }
         else
         {
-            StartGame();
+            await StartGame();
         }
     }
 
@@ -63,12 +54,12 @@ internal class GameManager
             GameOver();
         }
 
-        var centeredPipe = Pipes.FirstOrDefault(p => p.IsCentered(_birdWidth, _gameWidth));
+        var centeredPipe = Pipes.FirstOrDefault(p => p.IsCentered(Configuration.Bird_Width, Configuration.Game_Width));
 
         if (centeredPipe != null)
         {
-            var hasCollidedWithBottom = Bird.DistanceFromGround < centeredPipe.GapBottom - _groundHeight;
-            var hasCollidedWithTop = Bird.DistanceFromGround + _birdHeight > centeredPipe.GapTop - _groundHeight;
+            var hasCollidedWithBottom = Bird.DistanceFromGround < centeredPipe.GapBottom - Configuration.Game_GroundHeight;
+            var hasCollidedWithTop = Bird.DistanceFromGround + Configuration.Bird_Height > centeredPipe.GapTop - Configuration.Game_GroundHeight;
 
             if (hasCollidedWithBottom || hasCollidedWithTop)
             {
@@ -87,19 +78,19 @@ internal class GameManager
             ManagePipes();
 
             MainLoopCycleCompleted?.Invoke(this, EventArgs.Empty);
-            await Task.Delay(20);
+            await Task.Delay(Configuration.Game_MainLoopDelay);
         }
     }
 
     private void ManagePipes()
     {
         if (!Pipes.Any()
-            || Pipes.Last().DistanceFromLeft <= 250)
+            || Pipes.Last().DistanceFromLeft <= Configuration.Game_DistanceFromLeftToNextPipe)
         {
-            Pipes.Add(new PipeModel(_pipeGap, _pipeHeight, _pipeWidth));
+            Pipes.Add(new PipeModel(Configuration.Pipe_Gap, Configuration.Pipe_Height, Configuration.Pipe_Width));
         }
 
-        if (Pipes.First().IsOffScreen(_pipeWidth))
+        if (Pipes.First().IsOffScreen(Configuration.Pipe_Width))
         {
             Pipes.Remove(Pipes.First());
         }
@@ -108,7 +99,7 @@ internal class GameManager
 
     private void MoveObjects()
     {
-        Bird.Fall(_gravity);
+        Bird.Fall(Configuration.Gravity);
         Pipes.ForEach(p => p.Move());
     }
 

@@ -1,8 +1,8 @@
 ﻿namespace FlappyBlazor.Game.Models;
 public class BirdModel
 {
-    public int DistanceFromGround { get; private set; } = 100;
-    public int JumpStremgth { get; private set; } = 50;
+    public int DistanceFromGround { get; private set; } = Configuration.Bird_StartDistanceFromGround;
+    public int JumpStrength { get; private set; } = Configuration.Bird_JumpStrength;
 
     public void Fall(int gravity)
     {
@@ -16,9 +16,9 @@ public class BirdModel
 
     public void Jump()
     {
-        if (DistanceFromGround < 530)
+        if (DistanceFromGround < Configuration.Bird_MaximalHightForJump)
         {
-            DistanceFromGround += JumpStremgth;
+            DistanceFromGround += JumpStrength;
         }
     }
 }
