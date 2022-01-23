@@ -67,6 +67,6 @@
     position: absolute;
 }
 
-.pipe.top {
-    transform: rotate(180);
+    .pipe.top {
+        transform: rotate(180deg);
 }
