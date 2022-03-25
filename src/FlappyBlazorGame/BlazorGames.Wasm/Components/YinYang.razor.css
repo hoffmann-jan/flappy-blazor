@@ -1,0 +1,36 @@
+﻿.yin-yang {
+    width: 192px;
+    height: 96px;
+    background: white;
+    box-sizing: content-box;
+    border-width: 4px 4px 100px 4px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 100%;
+    position: relative;
+}
+
+    .yin-yang:before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: white;
+        border: 36px solid black;
+        border-radius: 100%;
+        top: 50%;
+        left: 0;
+        box-sizing: content-box;
+    }
+
+    .yin-yang:after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: black;
+        border: 36px solid white;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+    }
