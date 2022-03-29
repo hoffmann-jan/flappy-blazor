@@ -25,36 +25,54 @@
         background: green;
         transform: translateZ(var(--cube-half-size));
         -ms-transform: translateZ(var(--cube-half-size));
+        -moz-transform: translateZ(var(--cube-half-size));
+        -o-transform: translateZ(var(--cube-half-size));
+        -webkit-transform: translateZ(var(--cube-half-size));
     }
 
     .side.back {
         background: yellow;
         transform: translateZ(var(--cube-half-size));
         -ms-transform: translateZ(var(--cube-half-size));
+        -moz-transform: translateZ(var(--cube-half-size));
+        -o-transform: translateZ(var(--cube-half-size));
+        -webkit-transform: translateZ(var(--cube-half-size));
     }
 
     .side.left {
         background: orange;
         transform: translateX(var(--cube-half-size-sign)) rotateY(-90deg);
         -ms-transform: translateX(var(--cube-half-size-sign)) rotateY(-90deg);
+        -moz-transform: translateX(var(--cube-half-size-sign)) rotateY(-90deg);
+        -o-transform: translateX(var(--cube-half-size-sign)) rotateY(-90deg);
+        -webkit-transform: translateX(var(--cube-half-size-sign)) rotateY(-90deg);
     }
 
     .side.right {
         background: red;
         transform: translateX(var(--cube-half-size)) rotateY(90deg);
         -ms-transform: translateX(var(--cube-half-size)) rotateY(90deg);
+        -moz-transform: translateX(var(--cube-half-size)) rotateY(90deg);
+        -o-transform: translateX(var(--cube-half-size)) rotateY(90deg);
+        -webkit-transform: translateX(var(--cube-half-size)) rotateY(90deg);
     }
 
     .side.top {
         background: white;
         transform: translateY(var(--cube-half-size-sign)) rotateX(-90deg);
         -ms-transform: translateY(var(--cube-half-size-sign)) rotateX(-90deg);
+        -moz-transform: translateY(var(--cube-half-size-sign)) rotateX(-90deg);
+        -o-transform: translateY(var(--cube-half-size-sign)) rotateX(-90deg);
+        -webkit-transform: translateY(var(--cube-half-size-sign)) rotateX(-90deg);
     }
 
     .side.bottom {
         background: blue;
         transform: translateY(var(--cube-half-size)) rotateX(90deg);
         -ms-transform: translateY(var(--cube-half-size)) rotateX(90deg);
+        -moz-transform: translateY(var(--cube-half-size)) rotateX(90deg);
+        -o-transform: translateY(var(--cube-half-size)) rotateX(90deg);
+        -webkit-transform: translateY(var(--cube-half-size)) rotateX(90deg);
     }
 
 @keyframes rotateCube {
