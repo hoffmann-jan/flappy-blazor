@@ -1,0 +1,40 @@
+﻿.buttonDiv {
+    min-height: 88px;
+    min-width: 211px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    text-decoration: none;
+    color: #1fe8b6;
+    padding: 20px 50px;
+    border: 3px solid #1fe8b6;
+    position: relative;
+    margin-left: 12px
+}
+    .button::before,
+    .button::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: inherit;
+        transition: all .5s;
+    }
+    .button::before {
+        top: -15px;
+        left: -15px;
+        border-width: 3px 0 0 3px;
+    }
+    .button::after {
+        bottom: -15px;
+        right: -15px;
+        border-width: 0 3px 3px 0;
+    }
+    .button:hover::before,
+    .button:hover::after {
+        width: calc(100% + 27px);
+        height: calc(100% + 27px);
+    }
