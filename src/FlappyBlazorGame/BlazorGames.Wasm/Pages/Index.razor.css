@@ -1,2 +1,14 @@
-﻿.nav {
+﻿.flex-gap {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav {
+    min-height: 88px;
+    min-width: 211px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
