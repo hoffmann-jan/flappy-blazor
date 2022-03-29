@@ -24,39 +24,47 @@
     .side.front {
         background: green;
         transform: translateZ(var(--cube-half-size));
+        -ms-transform: translateZ(var(--cube-half-size));
     }
 
     .side.back {
         background: yellow;
-        transform: translateZ(var(--cube-half-size-sign));
+        transform: translateZ(var(--cube-half-size));
+        -ms-transform: translateZ(var(--cube-half-size));
     }
 
     .side.left {
         background: orange;
         transform: translateX(var(--cube-half-size-sign)) rotateY(-90deg);
+        -ms-transform: translateX(var(--cube-half-size-sign)) rotateY(-90deg);
     }
 
     .side.right {
         background: red;
         transform: translateX(var(--cube-half-size)) rotateY(90deg);
+        -ms-transform: translateX(var(--cube-half-size)) rotateY(90deg);
     }
 
     .side.top {
         background: white;
         transform: translateY(var(--cube-half-size-sign)) rotateX(-90deg);
+        -ms-transform: translateY(var(--cube-half-size-sign)) rotateX(-90deg);
     }
 
     .side.bottom {
         background: blue;
         transform: translateY(var(--cube-half-size)) rotateX(90deg);
+        -ms-transform: translateY(var(--cube-half-size)) rotateX(90deg);
     }
 
 @keyframes rotateCube {
     from {
         transform: rotate3d(0, 0, 0, 0);
+        -ms-transform: rotate3d(0, 0, 0, 0);
     }
 
     to {
         transform: rotate3d(1, 1, 0, 360deg);
+        -ms-transform: rotate3d(1, 1, 0, 360deg);
     }
 }
