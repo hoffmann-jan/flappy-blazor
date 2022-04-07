@@ -59,6 +59,12 @@ body {
         text-align: center;
     }
 
+.flex-gap {
+    display: inline-flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    gap: 12px;
+}
 
 h1:focus {
     outline: none;

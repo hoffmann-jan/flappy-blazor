@@ -1,11 +1,4 @@
-﻿.flex-gap {
-    display: inline-flex;
-    flex-flow: column;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.nav {
+﻿.nav {
     min-height: 88px;
     min-width: 211px;
     display: flex;
