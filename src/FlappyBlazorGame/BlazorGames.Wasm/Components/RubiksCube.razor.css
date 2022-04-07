@@ -19,6 +19,7 @@
     border: 2px solid black;
     position: absolute;
     opacity: 0.5;
+    -webkit-opacity: 0.5;
 }
 
     .side.front {
