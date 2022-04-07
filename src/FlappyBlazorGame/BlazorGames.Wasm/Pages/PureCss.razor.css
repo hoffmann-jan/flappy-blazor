@@ -1,7 +1,7 @@
 ﻿.flex-container {
     display: flex;
     justify-content: space-around;
-    gap: 12px;
+    gap: 12px 12px;
 }
 
     .flex-container div {
