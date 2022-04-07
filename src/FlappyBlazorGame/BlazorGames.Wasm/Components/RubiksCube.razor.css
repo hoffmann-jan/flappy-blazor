@@ -8,6 +8,7 @@
     position: relative;
     transform-style: preserve-3d;
     animation: rotateCube 5s linear infinite;
+    -webkit-animation: rotateCube 5s linear infinite;
 }
 
 .side {
