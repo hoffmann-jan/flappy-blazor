@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlappyBlazor.Game", "Flappy
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorGames.Wasm", "BlazorGames.Wasm\BlazorGames.Wasm.csproj", "{EA3A763A-D3E8-46D1-B4BA-23177A5F7A68}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BananaBattles", "BananaBattles\BananaBattles.csproj", "{1122B4AF-CC21-46B1-A9BA-2826E2DCED30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EA3A763A-D3E8-46D1-B4BA-23177A5F7A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA3A763A-D3E8-46D1-B4BA-23177A5F7A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA3A763A-D3E8-46D1-B4BA-23177A5F7A68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1122B4AF-CC21-46B1-A9BA-2826E2DCED30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1122B4AF-CC21-46B1-A9BA-2826E2DCED30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1122B4AF-CC21-46B1-A9BA-2826E2DCED30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1122B4AF-CC21-46B1-A9BA-2826E2DCED30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

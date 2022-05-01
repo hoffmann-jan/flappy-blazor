@@ -1,0 +1,18 @@
+﻿.top-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.item {
+    height: 34px;
+    width: 34px;
+}
+
+.text {
+    color: whitesmoke;
+    text-align: center;
+}

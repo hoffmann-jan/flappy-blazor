@@ -1,0 +1,12 @@
+﻿.banana {
+    background-image: url('images/banana.png');
+    width: 34px;
+    height: 34px;
+    position: absolute;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

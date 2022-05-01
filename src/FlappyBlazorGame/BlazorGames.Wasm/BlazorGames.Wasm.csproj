@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BananaBattles\BananaBattles.csproj" />
     <ProjectReference Include="..\FlappyBlazor.Game\FlappyBlazor.Game.csproj" />
   </ItemGroup>
 
