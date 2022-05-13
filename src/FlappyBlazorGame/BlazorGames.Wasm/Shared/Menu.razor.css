@@ -1,2 +1,9 @@
-﻿body {
+﻿.menu {
+    flex-direction: column !important;
+    align-content: stretch !important;
+}
+
+.nav {
+    width: 250px;
+    text-align: center;
 }
