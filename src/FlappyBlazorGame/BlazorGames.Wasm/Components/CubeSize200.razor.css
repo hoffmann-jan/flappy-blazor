@@ -1,6 +1,9 @@
 ﻿.cube {
-    height: 200px;
-    width: 200px;
+    height: 350px;
+    width: 350px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     transform-style: preserve-3d;
     animation: rotateCube 5s linear infinite;

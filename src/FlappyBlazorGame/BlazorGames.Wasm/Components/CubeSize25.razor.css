@@ -1,12 +1,13 @@
-﻿.useCubeVariables {
+﻿.cube {
+    --cube-max-size: 35px;
     --cube-full-size: 20px;
     --cube-half-size: 10px;
     --cube-half-size-sign: -10px;
-}
-
-.cube {
-    height: var(--cube-full-size);
-    width: var(--cube-full-size);
+    height: var(--cube-max-size);
+    width: var(--cube-max-size);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     transform-style: preserve-3d;
     animation: rotateCube 5s linear infinite;
