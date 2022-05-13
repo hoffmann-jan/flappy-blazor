@@ -1,0 +1,24 @@
+﻿.banana-menu {
+    color: yellow;
+    border: 1px solid red;
+    max-width: 10%;
+    background-color: yellowgreen;
+}
+
+.banana-menu-brand {
+    border: 1px solid red;
+    max-width: 100%;
+    background-color: dimgray;
+}
+
+.banana-menu-nav-item {
+    color: inherit;
+    text-decoration: none !important;
+    border: 1px solid red;
+}
+
+.banana-menu-nav-link {
+    color: inherit;
+    text-decoration: none !important;
+    border: 1px solid red;
+}

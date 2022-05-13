@@ -52,18 +52,10 @@ body {
     width: inherit;
     height: inherit;
     align-items: center;
-}
-
-    .flex-container > div {
-        align-items: center;
-        text-align: center;
-    }
-
-.flex-gap {
-    display: inline-flex;
+    gap: 20px;
     flex-flow: column;
     flex-wrap: wrap;
-    gap: 12px;
+    flex-direction: row;
 }
 
 h1:focus {

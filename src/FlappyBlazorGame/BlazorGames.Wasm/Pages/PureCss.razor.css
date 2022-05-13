@@ -1,11 +1,1 @@
-﻿.flex-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 12px 12px;
-}
-
-    .flex-container div {
-        flex-shrink: 1;
-        width: 100%;
-        height: auto;
-    }
+﻿
